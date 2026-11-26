@@ -552,32 +552,43 @@ summary{
   }
 
   /* CREATIONS CARDS */
-  #creations .card {
-    min-width: 0;
-    width: 100%;
-  }
+  /* CREATIONS CARDS */
+#creations .gallery {
+  align-items: start;
+}
 
-  #creations .card-inner {
-    height: 100%;
-    border-radius: 10px;
-  }
+#creations .card {
+  min-width: 0;
+  width: 100%;
+  height: auto;
+  align-self: start;
+}
 
-  #creations .card-inner img {
-    width: 100%;
-    height: 130px;
-    object-fit: contain;
-  }
+#creations .card-inner {
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
 
-  #creations .card-inner p {
-    padding: 5px;
-    font-size: 13px;
-  }
+#creations .card-inner img {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+}
 
-  #creations .card-inner summary {
-    padding: 0 8px 10px;
-    font-size: 13px;
-    line-height: 1.5;
-  }
+#creations .card-inner p {
+  padding: 5px;
+  margin: 0;
+  font-size: 13px;
+}
+
+#creations .card-inner summary {
+  padding: 0 8px 10px;
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.5;
+}
 
   /* SERVICES CARDS */
   #service .service-card {
