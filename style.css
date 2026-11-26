@@ -254,6 +254,16 @@ nav ul li a:hover {
   text-align: center;
   padding: auto;
 }
+
+.service-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.8rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 2.5rem;
+  
+}
 .service-head{
   text-align: center;
   padding: bottom 50px;
@@ -526,19 +536,77 @@ summary{
 
 
 /* Product & Brand Posters: two cards per row on mobile */
+/* =================================
+   MOBILE: TWO-COLUMN CARD LAYOUT
+================================= */
+
 @media (max-width: 640px) {
-  .gallery {
+
+  /* Creations and Services grid */
+  #creations .gallery,
+  #service .gallery {
+    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.75rem;
+    gap: 12px;
+    width: 100%;
   }
 
-  .gallery .card-inner img {
-    height: 150px;
+  /* CREATIONS CARDS */
+  #creations .card {
+    min-width: 0;
+    width: 100%;
   }
 
-  .gallery .card-inner p,
-  .gallery .card-inner summary {
-    padding: 0.6rem;
-    font-size: 0.8rem;
+  #creations .card-inner {
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  #creations .card-inner img {
+    width: 100%;
+    height: 130px;
+    object-fit: contain;
+  }
+
+  #creations .card-inner p {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  #creations .card-inner summary {
+    padding: 0 8px 10px;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  /* SERVICES CARDS */
+  #service .service-card {
+    min-width: 0;
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  #service .service-inner {
+    padding: 14px 10px;
+    transform: none;
+  }
+
+  #service .service-inner strong {
+    font-size: 14px;
+  }
+
+  #service .service-item {
+    padding-top: 10px;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  /* Prevent mobile hover effects */
+  #creations .card:hover .card-inner {
+    transform: none;
+  }
+
+  #service .service-card:hover {
+    transform: none;
   }
 }
