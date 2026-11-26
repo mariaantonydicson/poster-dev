@@ -532,12 +532,12 @@ summary{
     gap: 0.75rem;
   }
 
-  .card-inner img {
+  .gallery .card-inner img {
     height: 150px;
   }
 
-  .card-inner p,
-  .card-inner summary {
+  .gallery .card-inner p,
+  .gallery .card-inner summary {
     padding: 0.6rem;
     font-size: 0.8rem;
   }
