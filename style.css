@@ -523,3 +523,22 @@ summary{
     font-size: 2rem;
   }
 }
+
+
+/* Product & Brand Posters: two cards per row on mobile */
+@media (max-width: 640px) {
+  .product-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .product-gallery .card-inner img {
+    height: 150px;
+  }
+
+  .product-gallery .card-inner p,
+  .product-gallery .card-inner summary {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+}
